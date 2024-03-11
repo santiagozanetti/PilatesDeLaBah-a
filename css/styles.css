@@ -106,13 +106,11 @@ body {
 }
 
 .cta-primary:hover {
-  background-color: var(
-    --verde-oscuro
-  ); /* Cambio de color al pasar el cursor */
+  background-color: var(--verde-oscuro);
 }
 
 .cta-secondary:hover {
-  background-color: var(--azul-claro); /* Cambio de color al pasar el cursor */
+  background-color: var(--color-title);
 }
 
 /* Animación */
@@ -994,29 +992,57 @@ body {
 }
 
 /* ----------------------- BOTÓN FLOTANTE ----------------------- */
+
 .floating-button {
   position: fixed;
-  bottom: 7px;
-  right: 7px;
-  z-index: 1000; /* Asegura que esté por encima de otros elementos */
-}
-
-.floating-button a {
-  display: block;
+  right: 5px;
+  z-index: 1000;
   width: 60px;
   height: 60px;
-  background-color: #25d366;
   border-radius: 50%;
   text-align: center;
   line-height: 60px;
-  font-size: 30px;
-  color: #fff;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-.floating-button a:hover {
-  background-color: var(--verde-oscuro);
+.whatsapp a {
+  display: block;
+  background-color: #25d366;
+  color: #fff;
+  font-size: 34px;
+  text-decoration: none;
+}
+
+.scroll-top a {
+  display: block;
+  background-color: #2bb4af;
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.floating-button.whatsapp {
+  bottom: 5px;
+}
+
+.floating-button.scroll-top {
+  bottom: 68px;
+}
+
+@media screen and (max-width: 767px) {
+  .floating-button {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
+
+  .floating-button.whatsapp {
+    bottom: 5px;
+  }
+
+  .floating-button.scroll-top {
+    bottom: 60px;
+  }
 }
 
 /* Media queries */
