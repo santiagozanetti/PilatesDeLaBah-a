@@ -26,16 +26,16 @@
 
         <ul class="nav__link nav__link--menu">
           <li class="nav__items">
-            <a href="#" class="nav__links">Inicio</a>
+            <a href="#actividades" class="nav__links">Actividades</a>
           </li>
           <li class="nav__items">
-            <a href="#" class="nav__links">Actividades</a>
+            <a href="#nosotros" class="nav__links">Nosotros</a>
           </li>
           <li class="nav__items">
-            <a href="#" class="nav__links">Nosotros</a>
+            <a href="#planes" class="nav__links">Planes</a>
           </li>
           <li class="nav__items">
-            <a href="#" class="nav__links">Planes</a>
+            <a href="#contacto" class="nav__links">Contacto</a>
           </li>
 
           <img
@@ -61,8 +61,8 @@
           rendimiento.
         </p>
         <div class="cta-buttons">
-          <a href="#" class="cta-primary">Conoce Más</a>
-          <a href="#" class="cta-secondary">Actividades</a>
+          <a href="#preguntas-frecuentes" class="cta-primary">Conocé Más</a>
+          <a href="#actividades" class="cta-secondary">Actividades</a>
         </div>
       </section>
     </header>
@@ -70,7 +70,7 @@
     <main>
       <!-------------------------------- SECCION ACTIVIDADES -------------------------------->
 
-      <section class="container activities">
+      <section id="actividades" class="container activities">
         <h2 class="subtitle">Nuestras Actividades</h2>
         <p class="activities__paragraph">
           Descubre nuestras actividades diseñadas para mejorar tu bienestar
@@ -96,7 +96,12 @@
                   <li>Aumenta la fuerza muscular</li>
                   <li>Reduce el estrés</li>
                 </ul>
-                <a href="#" class="cta">Reservar Clase</a>
+                <a
+                  href="https://api.whatsapp.com/send?phone=5491157086085&text=Hola,%20quiero%20reservar%20una%20clase"
+                  class="cta"
+                  target="_blank"
+                  >Reservar Clase</a
+                >
               </div>
             </div>
           </article>
@@ -145,7 +150,7 @@
       </section>
 
       <!-------------------------------- NUESTRO EQUIPO -------------------------------->
-      <section class="team">
+      <section id="nosotros" class="team">
         <div class="container">
           <h2 class="section-title">Conoce a Nuestro Equipo</h2>
           <div class="team-members">
@@ -255,7 +260,7 @@
 
       <!-------------------------------- LISTA DE PRECIOS -------------------------------->
 
-      <section class="price container">
+      <section id="planes" class="price container">
         <h2 class="subtitle">Elegí el plan perfecto para vos!</h2>
 
         <div class="price__table">
@@ -275,7 +280,12 @@
               </p>
             </div>
 
-            <a href="#" class="price__cta">Comenzá ahora</a>
+            <a
+              href="https://api.whatsapp.com/send?phone=5491157086085&text=Hola,%20estoy%20interesado/a%20en%20el%20plan%20BÁSICO"
+              class="price__cta"
+              target="_blank"
+              >Comenzá ahora</a
+            >
           </div>
 
           <div
@@ -296,7 +306,12 @@
               </p>
             </div>
 
-            <a href="#" class="price__cta">Comenzá ahora</a>
+            <a
+              href="https://api.whatsapp.com/send?phone=5491157086085&text=Hola,%20estoy%20interesado/a%20en%20el%20plan%20RECOMENDADO"
+              class="price__cta"
+              target="_blank"
+              >Comenzá ahora</a
+            >
           </div>
 
           <div class="price__element">
@@ -315,7 +330,12 @@
               </p>
             </div>
 
-            <a href="#" class="price__cta">Comenzá ahora</a>
+            <a
+              href="https://api.whatsapp.com/send?phone=5491157086085&text=Hola,%20estoy%20interesado/a%20en%20el%20plan%20PREMIUM"
+              class="price__cta"
+              target="_blank"
+              >Comenzá ahora</a
+            >
           </div>
         </div>
       </section>
@@ -419,7 +439,7 @@
       </section>
 
       <!-------------------------------- SECCION PREGUNTAS FRECUENTES  -------------------------------->
-      <section class="questions container">
+      <section id="preguntas-frecuentes" class="questions container">
         <h2 class="subtitle">Preguntas frecuentes</h2>
         <p class="questions__paragraph">
           Respuestas a las preguntas más comunes sobre nuestro servicio.
@@ -505,8 +525,8 @@
       </section>
 
       <!-------------------------------- UBICACIÓN -------------------------------->
-      <section class="contact container">
-        <h2 class="subtitle">Ubicación y Contacto</h2>
+      <section id="contacto" class="contact container">
+        <h2 class="subtitle">Ubicación</h2>
 
         <div class="contact__content">
           <div class="contact__map">
@@ -527,7 +547,10 @@
             <ul class="contact__list">
               <li class="contact__item">
                 <i class="fas fa-map-marker-alt"></i>
-                <span>Av. de Los Lagos 639, Nordelta, Buenos Aires</span>
+                <span>
+                  3 piso Boulevard del Mirador 220 Bahia Grande, Buenos
+                  Aires</span
+                >
               </li>
               <li class="contact__item">
                 <a
@@ -541,9 +564,15 @@
               </li>
 
               <li class="contact__item">
-                <i class="fas fa-envelope"></i>
-                <span>info@pilatesdelabahia.com</span>
+                <a
+                  href="https://www.facebook.com/pilatesdelabahia/"
+                  target="_blank"
+                >
+                  <i class="fa-brands fa-facebook"></i>
+                  <span>Pilates de la Bahia, Nordelta </span></a
+                >
               </li>
+
               <li class="contact__item">
                 <a
                   href="https://www.instagram.com/pilatesdelabahia/"
@@ -566,26 +595,34 @@
             <ul class="footer__list">
               <li><a href="#">Términos de servicio</a></li>
               <li><a href="#">Política de privacidad</a></li>
-              <li><a href="#">Preguntas frecuentes</a></li>
+              <li><a href="#preguntas-frecuentes">Preguntas frecuentes</a></li>
             </ul>
           </div>
           <div class="footer__section">
             <h3 class="footer__heading">Contáctanos</h3>
-            <p>Dirección: Av. Ejemplo 123, Ciudad</p>
+            <p>
+              Dirección: 3 piso Boulevard del Mirador 220 Bahia Grande Buenos
+              Aires AR, B1670 Rio, Tigre
+            </p>
             <p>Teléfono: +123 456 789</p>
-            <p>Email: info@example.com</p>
+            <p>Email: pilatesdelabahia@gmail.com</p>
           </div>
           <div class="footer__section">
             <h3 class="footer__heading">Redes Sociales</h3>
             <ul class="footer__social-list">
               <li>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a
+                  href="https://www.instagram.com/pilatesdelabahia/"
+                  target="_blank"
+                  ><i class="fab fa-instagram"></i
+                ></a>
               </li>
               <li>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-envelope"></i></a>
+                <a
+                  href="https://www.facebook.com/pilatesdelabahia/"
+                  target="_blank"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
               </li>
             </ul>
           </div>
@@ -594,6 +631,13 @@
           <p>Derechos reservados &copy; 2024</p>
         </div>
       </footer>
+
+      <!-- Botón flotante de WhatsApp -->
+      <div class="floating-button">
+        <a href="https://wa.me/1157086085" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
 
       <script src="./js/slider.js"></script>
       <script src="./js/questions.js"></script>
