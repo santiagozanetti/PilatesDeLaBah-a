@@ -985,8 +985,8 @@ body {
 /* ----------------------- BOTÓN FLOTANTE ----------------------- */
 .floating-button {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 7px;
+  right: 7px;
   z-index: 1000; /* Asegura que esté por encima de otros elementos */
 }
 
