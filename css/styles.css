@@ -7,6 +7,8 @@
   --color-title: #001a49;
   --verde-claro: #2bb4af;
   --azul-oscuro: #225f98;
+  --azul-claro: #3afff8;
+  --verde-oscuro: #1e847f;
 }
 
 html {
@@ -104,11 +106,13 @@ body {
 }
 
 .cta-primary:hover {
-  background-color: #1e4675; /* Cambio de color al pasar el cursor */
+  background-color: var(
+    --verde-oscuro
+  ); /* Cambio de color al pasar el cursor */
 }
 
 .cta-secondary:hover {
-  background-color: #52c2bd; /* Cambio de color al pasar el cursor */
+  background-color: var(--azul-claro); /* Cambio de color al pasar el cursor */
 }
 
 /* Animación */
@@ -202,7 +206,7 @@ body {
   color: #fff;
   text-decoration: none;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 16px;
   padding: 10px 15px;
   border-radius: 8px;
   transition: transform 0.3s ease, font-size 0.3s ease;
@@ -311,13 +315,13 @@ body {
 }
 
 .cta {
-  display: block; /* Convertir en bloque para centrar horizontalmente */
-  margin: 0 auto; /* Alinear horizontalmente */
-  width: fit-content; /* Ajustar el ancho al contenido */
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
   padding: 14px 28px;
   font-size: 18px;
   font-weight: 600;
-  text-align: center; /* Alineación centrada del texto */
+  text-align: center;
   text-decoration: none;
   border-radius: 0px; /* me gusta sin border pero preguntar como gustan mas*/
   transition: background-color 0.3s, color 0.3s, transform 0.3s;
@@ -328,7 +332,7 @@ body {
 }
 
 .cta:hover {
-  background-color: var(--azul-oscuro);
+  background-color: var(--verde-oscuro);
 }
 
 /* Estilos para dispositivos medianos (como el iPad) */
@@ -604,7 +608,7 @@ body {
 }
 
 .price__cta:hover {
-  background-color: var(--azul-oscuro);
+  background-color: var(--verde-oscuro);
 }
 
 .price__element--recommended {
@@ -636,7 +640,7 @@ body {
 }
 
 .card-recommended .price__cta:hover {
-  background-color: #1b4d7c;
+  background-color: var(--verde-oscuro);
 }
 
 /* Estilos para dispositivos medianos */
@@ -810,26 +814,29 @@ body {
 }
 
 .contact__info {
-  max-width: 750px;
+  margin-top: 30px; /* Ajusta el margen superior según sea necesario */
 }
 
 .contact__heading {
-  font-size: 2.3rem;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px; /* Ajusta el margen inferior según sea necesario */
 }
 
 .contact__list {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
 }
 
 .contact__item {
-  margin-bottom: 10px; /* Espacio entre los elementos */
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px; /* Ajusta el margen inferior según sea necesario */
 }
 
 .contact__item a {
   text-decoration: none;
+  color: inherit;
 }
 
 .contact__item i {
@@ -850,12 +857,16 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .contact__item {
-    display: flex;
-    align-items: center; /* Alinear verticalmente los elementos */
+  .contact__list {
+    text-align: center; /* Centra los elementos en dispositivos móviles */
   }
+
+  .contact__item {
+    justify-content: center; /* Centra los elementos horizontalmente */
+  }
+
   .contact__item i {
-    margin-right: 5px; /* Reducir el espacio entre el icono y el texto */
+    margin-right: 5px; /* Reduce el espaciado entre el ícono y el texto */
   }
 }
 
@@ -909,7 +920,7 @@ body {
 }
 
 .footer__list a:hover {
-  color: var(--azul-oscuro);
+  color: var(--verde-oscuro);
 }
 
 .footer__social-list {
@@ -1005,11 +1016,10 @@ body {
 }
 
 .floating-button a:hover {
-  background-color: #128c7e;
+  background-color: var(--verde-oscuro);
 }
 
 /* Media queries */
-
 @media (max-width: 800px) {
   .nav__menu {
     display: block;
