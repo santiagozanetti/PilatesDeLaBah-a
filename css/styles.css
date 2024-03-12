@@ -993,59 +993,61 @@ body {
 
 /* ----------------------- BOTÓN FLOTANTE ----------------------- */
 
-.floating-button {
+.floating-buttons {
   position: fixed;
-  right: 5px;
+  bottom: 10px;
+  right: 10px;
   z-index: 1000;
-  width: 60px;
-  height: 60px;
+}
+
+.floating-buttons i {
+  color: #fff;
+}
+
+.whatsapp {
+  background-color: #25d366;
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 62px;
+  right: 10px;
+  z-index: 1000;
+  background-color: #2bb4af;
+  border: none;
   border-radius: 50%;
   text-align: center;
-  line-height: 60px;
-  transition: background-color 0.3s, transform 0.3s;
+  line-height: 50px;
+  cursor: pointer;
+  display: none; /* Inicialmente oculto */
+  transition: opacity 0.3s ease; /* Transición suave */
 }
 
-.whatsapp a {
-  display: block;
-  background-color: #25d366;
+.scroll-top.show {
+  display: block; /* Se muestra cuando se aplica la clase "show" */
+}
+
+.scroll-top:hover {
+  background-color: #1e4675; /* Cambio de color al pasar el cursor */
+}
+
+.floating-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 30px;
   color: #fff;
-  font-size: 34px;
-  text-decoration: none;
+  cursor: pointer;
 }
 
-.scroll-top a {
-  display: block;
-  background-color: #2bb4af;
-  color: #fff;
-  font-size: 24px;
-  text-decoration: none;
+.floating-button:hover {
+  background-color: var(--verde-oscuro);
+  transition: 0.2s;
 }
 
-.floating-button.whatsapp {
-  bottom: 5px;
-}
-
-.floating-button.scroll-top {
-  bottom: 68px;
-}
-
-@media screen and (max-width: 767px) {
-  .floating-button {
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-  }
-
-  .floating-button.whatsapp {
-    bottom: 5px;
-  }
-
-  .floating-button.scroll-top {
-    bottom: 60px;
-  }
-}
-
-/* Media queries */
+/* ------------------------ Media queries ---------------------------- */
 @media (max-width: 800px) {
   .nav__menu {
     display: block;
