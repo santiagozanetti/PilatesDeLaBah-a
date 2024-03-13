@@ -21,6 +21,7 @@
     <header class="hero">
       <nav class="nav container" aria-label="">
         <div class="nav__logo">
+          <img src="./images/icon.jpg" alt="Logo de Pilates De La Bahía" />
           <h2 class="nav__title">Pilates De La Bahía</h2>
         </div>
 
@@ -73,7 +74,7 @@
       <section id="actividades" class="container activities">
         <h2 class="subtitle">Nuestras Actividades</h2>
         <p class="activities__paragraph">
-          Descubre nuestras actividades diseñadas para mejorar tu bienestar
+          Descubrí nuestras actividades diseñadas para mejorar tu bienestar
           físico y mental.
         </p>
 
@@ -114,7 +115,7 @@
                 class="card__image"
               />
               <div class="card__content">
-                <h3 class="card__title">Entrenamiento Funcional</h3>
+                <h3 class="card__title">Clases para embarazadas</h3>
                 <p class="card__description">
                   Sesiones dinámicas para mejorar tu resistencia y tonificar tu
                   cuerpo.
@@ -133,7 +134,7 @@
             <div class="card">
               <img src="./images/pilates5.png" alt="Yoga" class="card__image" />
               <div class="card__content">
-                <h3 class="card__title">Yoga</h3>
+                <h3 class="card__title">Clases para adultos mayores</h3>
                 <p class="card__description">
                   Encuentra tu equilibrio interior con nuestras clases de yoga.
                 </p>
@@ -264,12 +265,12 @@
 
         <div class="price__table">
           <div class="price__element">
-            <p class="price__name">Plan Básico</p>
+            <p class="price__name">Plan 4 clases</p>
             <h3 class="price__price">$20.000 / mes</h3>
 
             <div class="price__items">
               <p class="price__features">
-                <i class="fas fa-check"></i> 2 x semana
+                <i class="fas fa-check"></i> 1 x semana
               </p>
               <p class="price__features">
                 <i class="fas fa-check"></i> Clases Grupales
@@ -290,7 +291,7 @@
           <div
             class="price__element price__element--recommended card-recommended"
           >
-            <p class="price__name">Plan Recomendado</p>
+            <p class="price__name">Plan 8 clases</p>
             <h3 class="price__price">$30.000 / mes</h3>
 
             <div class="price__items">
@@ -298,7 +299,7 @@
                 <i class="fas fa-check"></i> 3 x semana
               </p>
               <p class="price__features">
-                <i class="fas fa-check"></i> Clases individuales
+                <i class="fas fa-check"></i> Clases Grupales
               </p>
               <p class="price__features">
                 <i class="fas fa-check"></i> Atención Personalizada
@@ -306,7 +307,7 @@
             </div>
 
             <a
-              href="https://api.whatsapp.com/send?phone=5491157086085&text=Hola,%20estoy%20interesado/a%20en%20el%20plan%20RECOMENDADO"
+              href="https://api.whatsapp.com/send?phone=5491157086085&text=Hola,%20estoy%20interesado/a%20en%20el%20plan%20Rde20%820%clases"
               class="price__cta"
               target="_blank"
               >Comenzá ahora</a
@@ -314,7 +315,7 @@
           </div>
 
           <div class="price__element">
-            <p class="price__name">Plan Premium</p>
+            <p class="price__name">Plan 12 clases</p>
             <h3 class="price__price">$45.000 / mes</h3>
 
             <div class="price__items">
@@ -322,7 +323,7 @@
                 <i class="fas fa-check"></i> Todos los días hábiles
               </p>
               <p class="price__features">
-                <i class="fas fa-check"></i> Clases Personalizadas
+                <i class="fas fa-check"></i>Clases Grupales
               </p>
               <p class="price__features">
                 <i class="fas fa-check"></i> Beneficios disponibles
@@ -338,6 +339,31 @@
           </div>
         </div>
       </section>
+
+      <!---------------------- HORARIOS -------------------->
+
+      <div class="schedule-section">
+        <section id="horario" class="schedule">
+          <h2>Horarios de Clases</h2>
+          <div class="table-wrapper">
+            <table class="schedule-table" aria-describedby="Horario">
+              <thead>
+                <tr>
+                  <th data-initial="L">Lunes</th>
+                  <th data-initial="M">Martes</th>
+                  <th data-initial="M">Miércoles</th>
+                  <th data-initial="J">Jueves</th>
+                  <th data-initial="V">Viernes</th>
+                  <th data-initial="S">Sábado</th>
+                </tr>
+              </thead>
+              <tbody id="schedule-body">
+                <!-- Aquí se agregarán las filas de horarios dinámicamente -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
 
       <!-------------------------------- TESTIMONIOS -------------------------------->
 
@@ -623,6 +649,11 @@
                   ><i class="fab fa-facebook-f"></i
                 ></a>
               </li>
+              <li>
+                <a href="#" id="emailButton">
+                  <i class="fa-solid fa-envelope"></i>
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -649,6 +680,8 @@
       <script src="./js/questions.js"></script>
       <script src="./js/menu.js"></script>
       <script src="./js/gotop.js"></script>
+      <script src="./js/schedule.js"></script>
+      <script src="./js/mail.js"></script>
     </main>
   </body>
 </html>

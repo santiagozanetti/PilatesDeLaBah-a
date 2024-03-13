@@ -232,6 +232,22 @@ body {
   display: var(--show, none);
 }
 
+.nav__logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav__logo img {
+  width: 50px; /* Tamaño del logotipo en pantallas grandes */
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .nav__logo img {
+    width: 40px; /* Tamaño del logotipo en dispositivos móviles */
+  }
+}
+
 /* ----------------- SECCION ACTIVIDADES ------------------- */
 
 .activities {
@@ -344,6 +360,80 @@ body {
       50% - 20px
     ); /* Establecer el ancho base de cada card en dispositivos medianos */
     max-width: calc(50% - 20px); /* Establecer el ancho máximo de las cards */
+  }
+}
+
+/* ------------------------------ HORARIOS -------------------------------- */
+
+.schedule-section {
+  margin: 20px auto;
+  max-width: 800px;
+  overflow-x: auto;
+}
+
+.schedule {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.schedule h2 {
+  font-size: 34px;
+  margin-bottom: 18px;
+  text-align: center;
+  color: var(--verde-oscuro);
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.schedule-table th,
+.schedule-table td {
+  padding: 10px;
+  width: 16.666%; /* Establece un ancho fijo para cada columna (100% dividido entre 6 columnas) */
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.schedule-table th {
+  background-color: var(--verde-claro);
+  font-size: 20px;
+}
+
+.schedule-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Color para filas pares */
+}
+
+.schedule-table tbody tr:nth-child(odd) {
+  background-color: #e6e6e6; /* Color para filas impares */
+}
+
+.schedule-table tbody tr:hover {
+  background-color: #f0f0f0;
+}
+
+.schedule-table tbody tr td {
+  height: 40px; /* Establece un alto fijo para las celdas */
+}
+
+@media screen and (max-width: 600px) {
+  .schedule-section {
+    overflow-x: scroll;
+  }
+}
+
+@media (max-width: 768px) {
+  .schedule-table th {
+    font-size: 0; /* Oculta el texto completo de los encabezados de las columnas */
+  }
+  .schedule-table th::after {
+    content: attr(
+      data-initial
+    ); /* Muestra solo el contenido del atributo data-initial (la inicial del día) */
+    font-size: initial; /* Restaura el tamaño de fuente predeterminado */
   }
 }
 
@@ -1020,7 +1110,7 @@ body {
   line-height: 50px;
   cursor: pointer;
   display: none; /* Inicialmente oculto */
-  transition: opacity 0.3s ease; /* Transición suave */
+  transition: opacity 0.3s ease-in-out; /* Transición suave */
 }
 
 .scroll-top.show {
