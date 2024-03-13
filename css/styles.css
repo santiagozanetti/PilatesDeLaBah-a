@@ -1100,7 +1100,7 @@ body {
 
 .scroll-top {
   position: fixed;
-  bottom: 62px;
+  bottom: 125px;
   right: 10px;
   z-index: 1000;
   background-color: #2bb4af;
@@ -1130,6 +1130,12 @@ body {
   font-size: 30px;
   color: #fff;
   cursor: pointer;
+}
+
+.tomoTurno {
+  position: fixed;
+  bottom: 48px;
+  right: -297px;
 }
 
 .floating-button:hover {
