@@ -160,7 +160,7 @@ body {
 }
 
 .nav__title {
-  font-size: 28px; /* Aumenta el tamaño de la fuente */
+  font-size: 18px; /* Aumenta el tamaño de la fuente */
   font-weight: bold; /* Aumenta el peso de la fuente */
   color: #fff; /* Color blanco para un mejor contraste */
   font-family: "Arial", sans-serif; /* Selecciona una fuente fácilmente legible */
@@ -238,13 +238,126 @@ body {
 }
 
 .nav__logo img {
-  width: 50px; /* Tamaño del logotipo en pantallas grandes */
+  width: 40px; 
   margin-right: 20px;
 }
 
 @media screen and (max-width: 768px) {
   .nav__logo img {
     width: 40px; /* Tamaño del logotipo en dispositivos móviles */
+  }
+}
+
+/* ----------------- SECCION NOSOTROS ------------------- */
+
+.heading {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.heading h1 {
+  font-size: 45px;
+  color: #000;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.heading h1::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  display: block;
+  margin: 0 auto;
+  background-color: #4caf50;
+}
+
+.heading p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 35px;
+}
+
+.about-container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #ebeaea;
+}
+
+.about-image {
+  flex: 1;
+  margin-right: 40px;
+  overflow: hidden;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  transition: 0.5s ease;
+}
+.about-image::hover img {
+  transform: scale(1.2);
+}
+.about-content {
+  flex: 1;
+}
+
+.about-content h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.about-content p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #666;
+}
+
+@media screen and (max-width: 768px) {
+  .heading {
+    padding: 0px 20px;
+  }
+  .heading h1 {
+    font-size: 36px;
+  }
+  .heading p {
+    font-size: 17px;
+    margin-bottom: 0px;
+  }
+
+  .about-container {
+    padding: 0px;
+    margin-top: 20px;
+  }
+  .about {
+    padding: 20px;
+    flex-direction: column;
+  }
+  .about-image {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+  .about-content p {
+    padding: 0px;
+    font-size: 16px;
+  }
+  .about-content {
+    font-size: 16px;
   }
 }
 
