@@ -1,26 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const scrollTopButton = document.querySelector(".scroll-top");
+  var btnScrollToTop = document.getElementById("btnScrollToTop");
 
-  // Función para desplazarse al principio de la página
+  window.addEventListener("scroll", function () {
+    // Muestra u oculta el botón basado en la posición vertical de la página
+    if (window.scrollY > 300) {
+      // Cambia 300 al número de píxeles a partir del cual deseas mostrar el botón
+      btnScrollToTop.style.display = "block";
+    } else {
+      btnScrollToTop.style.display = "none";
+    }
+  });
+
+  // Función para desplazarse suavemente hacia arriba
   function scrollToTop() {
     window.scrollTo({
+      top: 0,
       behavior: "smooth",
     });
   }
 
-  // Mostrar u ocultar el botón según la posición de desplazamiento
-  function toggleScrollTopButton() {
-    if (window.scrollY > 100) {
-      // Cambia este valor según tu preferencia
-      scrollTopButton.classList.add("show");
-    } else {
-      scrollTopButton.classList.remove("show");
-    }
-  }
-
-  // Agregar evento click al botón
-  scrollTopButton.addEventListener("click", scrollToTop);
-
-  // Agregar evento scroll para mostrar u ocultar el botón
-  window.addEventListener("scroll", toggleScrollTopButton);
+  // Asignar la función scrollToTop al clic del botón
+  btnScrollToTop.addEventListener("click", scrollToTop);
 });

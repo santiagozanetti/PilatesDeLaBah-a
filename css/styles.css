@@ -1,10 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Sulphur+Point:wght@300;400;700&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sulphur+Point:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
 
 :root {
   --padding-container: 100px 0;
-  --color-title: #001a49;
+  --color-title: #333;
   --verde-claro: #2bb4af;
   --azul-oscuro: #225f98;
   --azul-claro: #3afff8;
@@ -15,8 +13,8 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: "Sulphur Point", sans-serif;
+* {
+  font-family: "Roboto", sans-serif;
 }
 
 .container {
@@ -70,13 +68,15 @@ body {
 }
 
 .hero__title {
-  font-size: 40px;
+  font-size: 46px;
   line-height: 1.5;
-  margin-top: 100px; /* Ajusta el margen superior según sea necesario */
+  margin-top: 100px;
+  text-transform: uppercase;
+  color: #fff;
 }
 
 .hero__paragraph {
-  font-size: 25px;
+  font-size: 21px;
   line-height: 1.6;
 }
 
@@ -110,7 +110,7 @@ body {
 }
 
 .cta-secondary:hover {
-  background-color: var(--color-title);
+  background-color: #223098;
 }
 
 /* Animación */
@@ -128,17 +128,18 @@ body {
 /* Estilos para dispositivos que no sean de escritorio */
 @media only screen and (max-width: 767px) {
   .hero__container {
-    margin-top: 200px;
+    margin-top: 170px;
+    text-align: center;
   }
 
   .hero__title {
     font-size: 30px;
-    margin-top: 20px;
+    margin-top: 0px;
   }
 
   .hero__paragraph {
     font-size: 20px;
-    margin-top: 30px;
+    margin-top: 10px;
     margin-bottom: 20px;
   }
 
@@ -160,14 +161,13 @@ body {
 }
 
 .nav__title {
-  font-size: 18px; /* Aumenta el tamaño de la fuente */
-  font-weight: bold; /* Aumenta el peso de la fuente */
-  color: #fff; /* Color blanco para un mejor contraste */
-  font-family: "Arial", sans-serif; /* Selecciona una fuente fácilmente legible */
-  text-transform: uppercase; /* Convierte el texto a mayúsculas */
-  letter-spacing: 3px; /* Aumenta el espaciado entre letras */
-  text-align: center; /* Centra el texto */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Agrega una sombra suave */
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* Estilos para dispositivos pequeños */
@@ -203,7 +203,6 @@ body {
 .nav__links {
   color: #fff;
   text-decoration: none;
-  font-weight: 600;
   font-size: 16px;
   padding: 10px 15px;
   border-radius: 8px;
@@ -238,7 +237,7 @@ body {
 }
 
 .nav__logo img {
-  width: 40px; 
+  width: 40px;
   margin-right: 20px;
 }
 
@@ -257,30 +256,38 @@ body {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  margin: 20px auto;
+  margin: 50px auto;
 }
 
 .heading h1 {
-  font-size: 45px;
-  color: #000;
+  font-size: 2.2rem;
+  color: #444444;
   margin-bottom: 25px;
   position: relative;
+  text-transform: uppercase;
 }
 
-.heading h1::after {
+.heading h1 span {
+  color: var(--verde-claro);
+}
+
+/* .heading h1::after {
   content: "";
   position: absolute;
   width: 100%;
   height: 4px;
   display: block;
   margin: 0 auto;
-  background-color: #4caf50;
-}
+  background-color: var(--verde-claro);
+} 
+esto es para el subrayado
+*/
 
 .heading p {
   font-size: 18px;
-  color: #666;
+  color: var(--color-title);
   margin-bottom: 35px;
+  font-weight: lighter;
 }
 
 .about-container {
@@ -309,9 +316,11 @@ body {
   display: block;
   transition: 0.5s ease;
 }
+
 .about-image::hover img {
   transform: scale(1.2);
 }
+
 .about-content {
   flex: 1;
 }
@@ -319,13 +328,14 @@ body {
 .about-content h2 {
   font-size: 30px;
   margin-bottom: 15px;
-  color: #333;
+  color: var(--color-title);
 }
 
 .about-content p {
   font-size: 18px;
   line-height: 1.5;
-  color: #666;
+  font-weight: 400;
+  color: var(--color-title);
 }
 
 @media screen and (max-width: 768px) {
@@ -361,7 +371,7 @@ body {
   }
 }
 
-/* ----------------- SECCION ACTIVIDADES ------------------- */
+/* -------------------- SECCION ACTIVIDADES -------------------- */
 
 .activities {
   padding: 50px 0;
@@ -369,15 +379,19 @@ body {
 
 .subtitle {
   font-size: 2rem;
-  font-weight: bold;
-  color: #333;
+  color: var(--color-title);
   text-align: center;
   margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.subtitle span {
+  color: var(--verde-claro);
 }
 
 .activities__paragraph {
   font-size: 1.2rem;
-  color: #666;
+  color: var(--color-title);
   text-align: center;
   margin-bottom: 40px;
 }
@@ -410,15 +424,15 @@ body {
 
 .card__title {
   font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
-  margin: 10px auto; /* Alinear horizontalmente */
-  text-align: center; /* Alineación centrada del texto */
+  color: var(--color-title);
+  margin: 10px auto;
+  text-align: center;
+  text-transform: capitalize;
 }
 
 .card__description {
   font-size: 1rem;
-  color: #666;
+  color: var(--color-title);
   margin-bottom: 15px;
   text-align: center;
 }
@@ -432,13 +446,14 @@ body {
   margin-bottom: 5px;
   padding-left: 20px;
   position: relative;
+  color: var(--color-title);
 }
 
 .benefits li:before {
   content: "\2022";
   position: absolute;
   left: 0;
-  color: #2091f9;
+  color: var(--verde-claro);
 }
 
 .cta {
@@ -450,10 +465,9 @@ body {
   font-weight: 600;
   text-align: center;
   text-decoration: none;
-  border-radius: 0px; /* me gusta sin border pero preguntar como gustan mas*/
+  border-radius: 0px;
   transition: background-color 0.3s, color 0.3s, transform 0.3s;
   text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
   background-color: var(--verde-claro);
   color: #fff;
 }
@@ -490,10 +504,15 @@ body {
 }
 
 .schedule h2 {
-  font-size: 34px;
+  font-size: 2rem;
   margin-bottom: 18px;
   text-align: center;
-  color: var(--verde-oscuro);
+  color: var(--color-title);
+  text-transform: uppercase;
+}
+
+.schedule h2 span {
+  color: var(--verde-claro);
 }
 
 .schedule-table {
@@ -509,6 +528,7 @@ body {
   width: 16.666%; /* Establece un ancho fijo para cada columna (100% dividido entre 6 columnas) */
   box-sizing: border-box;
   text-align: center;
+  color: var(--color-title);
 }
 
 .schedule-table th {
@@ -1196,64 +1216,66 @@ body {
 
 /* ----------------------- BOTÓN FLOTANTE ----------------------- */
 
+/* styles.css */
 .floating-buttons {
   position: fixed;
-  bottom: 10px;
-  right: 10px;
-  z-index: 1000;
-}
-
-.floating-buttons i {
-  color: #fff;
-}
-
-.whatsapp {
-  background-color: #25d366;
-}
-
-.scroll-top {
-  position: fixed;
-  bottom: 125px;
-  right: 10px;
-  z-index: 1000;
-  background-color: #2bb4af;
-  border: none;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 50px;
-  cursor: pointer;
-  display: none; /* Inicialmente oculto */
-  transition: opacity 0.3s ease-in-out; /* Transición suave */
-}
-
-.scroll-top.show {
-  display: block; /* Se muestra cuando se aplica la clase "show" */
-}
-
-.scroll-top:hover {
-  background-color: #1e4675; /* Cambio de color al pasar el cursor */
+  bottom: 2px;
+  right: 5px;
 }
 
 .floating-button {
+  margin-bottom: 10px;
+  color: #fff;
+  text-align: center;
+  border-radius: 50%;
   width: 50px;
   height: 50px;
-  border-radius: 50%;
-  text-align: center;
   line-height: 50px;
+  transition: 0.2s ease-in-out;
+}
+
+.floating-button a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.floating-button.tomoTurno {
+  background-image: url(/images/tomoTurno.png);
+  background-size: 160%;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 6px;
+}
+
+.floating-button.whatsapp {
+  background-color: #25d366;
   font-size: 30px;
-  color: #fff;
-  cursor: pointer;
 }
 
-.tomoTurno {
+.floating-button.whatsapp:hover {
+  background-color: #1bad50;
+}
+
+#btnScrollToTop {
   position: fixed;
-  bottom: 48px;
-  right: -297px;
+  bottom: 125px;
+  right: 5px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  transition: opacity 0.3s;
 }
 
-.floating-button:hover {
-  background-color: var(--verde-oscuro);
-  transition: 0.2s;
+#btnScrollToTop:hover {
+  opacity: 0.8;
 }
 
 /* ------------------------ Media queries ---------------------------- */

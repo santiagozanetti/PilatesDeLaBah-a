@@ -75,11 +75,7 @@
     <main>
       <!-------------------------------- SECCION NOSOTROS -------------------------------->
       <div id="nosotros" class="heading">
-        <h1>Sobre Nosotros</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
-          blanditiis libero corrupti quisquam omnis! Explicabo, aperiam
-        </p>
+        <h1>Sobre <span>Nosotros</span></h1>
         <div class="about-container">
           <section class="about">
             <div class="about-image">
@@ -88,10 +84,14 @@
             <div class="about-content">
               <h2>¿Qué Nos Hace Especiales?</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-                enim officiis illum dolor laborum suscipit non aut, quae culpa
-                quisquam nemo quidem dolorum deleniti aliquam quo cum vitae,
-                repudiandae vero?
+                Nos esforzamos por ofrecer una experiencia única y memorable a
+                cada uno de nuestros clientes. Lo que nos distingue es nuestro
+                compromiso con la excelencia y la satisfacción del cliente en
+                cada paso del camino. <br />
+                Desde nuestro equipo dedicado hasta nuestros productos y
+                servicios de calidad superior, nos esforzamos por superar las
+                expectativas y dejar una impresión duradera en quienes confían
+                en nosotros.
               </p>
             </div>
           </section>
@@ -101,7 +101,7 @@
       <!-------------------------------- SECCION ACTIVIDADES -------------------------------->
 
       <section id="actividades" class="container activities">
-        <h2 class="subtitle">Nuestras Actividades</h2>
+        <h2 class="subtitle"><span>Nuestras</span> Actividades</h2>
         <p class="activities__paragraph">
           Descubrí nuestras actividades diseñadas para mejorar tu bienestar
           físico y mental.
@@ -383,7 +383,7 @@
 
       <div class="schedule-section">
         <section id="horario" class="schedule">
-          <h2>Horarios de Clases</h2>
+          <h2><span>Horarios</span> de Clases</h2>
           <div class="table-wrapper">
             <table class="schedule-table" aria-describedby="Horario">
               <thead>
@@ -657,8 +657,6 @@
           <div class="footer__section">
             <h3 class="footer__heading">Enlaces útiles</h3>
             <ul class="footer__list">
-              <li><a href="#">Términos de servicio</a></li>
-              <li><a href="#">Política de privacidad</a></li>
               <li><a href="#preguntas-frecuentes">Preguntas frecuentes</a></li>
             </ul>
           </div>
@@ -701,25 +699,22 @@
         </div>
       </footer>
 
-      <!-- Botón flotante de WhatsApp -->
+      <!------------ Botones Flotantes  -------------->
       <div class="floating-buttons">
-        <div class="floating-button whatsapp">
-          <a href="https://wa.me/+5401144346779" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-          </a>
-        </div>
-        <div class="floating-button scroll-top">
-          <a href="#" class="scroll-to-top">
-            <i class="fas fa-chevron-up"></i>
-          </a>
-        </div>
+        <button onclick="scrollToTop()" id="btnScrollToTop">
+          <i class="fa-solid fa-arrow-up"></i>
+        </button>
         <div class="floating-button tomoTurno">
           <a
             href="https://tomoturnos.com/app/#/login/pilatesdelabahia?noRedirect=true"
-            class="tomoTurno"
             target="_blank"
           >
-            <img src="./images/tomoturno.png" alt="Tomo Turno" />
+          </a>
+        </div>
+
+        <div class="floating-button whatsapp">
+          <a href="https://wa.me/+5401144346779" target="_blank">
+            <i class="fab fa-whatsapp"></i>
           </a>
         </div>
       </div>
