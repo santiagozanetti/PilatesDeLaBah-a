@@ -1,30 +1,30 @@
-(function () {
-  const sliders = [...document.querySelectorAll(".testimony__body")];
-  const buttonNext = document.querySelector("#next");
-  const buttonBefore = document.querySelector("#before");
-  let value;
+document.addEventListener("DOMContentLoaded", function () {
+  const opiniones = document.querySelectorAll(".opinion");
+  let indiceOpinionActual = 0;
 
-  buttonNext.addEventListener("click", () => {
-    changePosition(1);
-  });
+  function mostrarOpinion(indice) {
+    opiniones.forEach((opinion) => opinion.classList.remove("active"));
+    opiniones[indice].classList.add("active");
+  }
 
-  buttonBefore.addEventListener("click", () => {
-    changePosition(-1);
-  });
+  function mostrarSiguienteOpinion() {
+    indiceOpinionActual = (indiceOpinionActual + 1) % opiniones.length;
+    mostrarOpinion(indiceOpinionActual);
+  }
 
-  const changePosition = (add) => {
-    const currentTestimony = document.querySelector(".testimony__body--show")
-      .dataset.id;
-    value = Number(currentTestimony);
-    value += add;
+  function mostrarOpinionAnterior() {
+    indiceOpinionActual =
+      (indiceOpinionActual - 1 + opiniones.length) % opiniones.length;
+    mostrarOpinion(indiceOpinionActual);
+  }
 
-    sliders[Number(currentTestimony) - 1].classList.remove(
-      "testimony__body--show"
-    );
-    if (value === sliders.length + 1 || value === 0) {
-      value = value === 0 ? sliders.length : 1;
-    }
+  document
+    .getElementById("next-opinion")
+    .addEventListener("click", mostrarSiguienteOpinion);
+  document
+    .getElementById("prev-opinion")
+    .addEventListener("click", mostrarOpinionAnterior);
 
-    sliders[value - 1].classList.add("testimony__body--show");
-  };
-})();
+  // Mostrar la primera opinión al cargar la página
+  mostrarOpinion(indiceOpinionActual);
+});
