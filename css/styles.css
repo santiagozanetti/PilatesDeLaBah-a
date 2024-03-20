@@ -1125,6 +1125,12 @@ html {
   text-align: center;
 }
 
+.floating-button i.fa-arrow-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #btnScrollToTop:hover {
   opacity: 0.8;
 }
