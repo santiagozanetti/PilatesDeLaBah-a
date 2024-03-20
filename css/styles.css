@@ -966,6 +966,7 @@ html {
 
 .footer__section p {
   margin-bottom: 1rem;
+  color: inherit;
 }
 
 .footer__heading {
