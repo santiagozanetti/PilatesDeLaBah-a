@@ -305,82 +305,31 @@
 
       <!-------------------------------- LISTA DE PRECIOS -------------------------------->
 
-      <section id="planes" class="price container">
-        <h2 class="subtitle">Elegí el plan perfecto para <span>vos</span></h2>
-
-        <div class="price__table">
-          <div class="price__element">
-            <p class="price__name">Plan 4 clases</p>
-            <h3 class="price__price">$20.000 / mes</h3>
-
-            <div class="price__items">
-              <p class="price__features">
-                <i class="fas fa-check"></i> 1 x semana
-              </p>
-              <p class="price__features">
-                <i class="fas fa-check"></i> Clases Grupales
-              </p>
-              <p class="price__features">
-                <i class="fas fa-check"></i> 10% Off
-              </p>
+      <section class="pricing">
+        <div class="container">
+          <h2 class="section-title">Nuestros Planes</h2>
+          <h3 class="section-subtitle">Precios Mensuales</h3>
+          <div class="pricing-plans">
+            <div class="pricing-plan">
+              <h3 class="plan-name">4 Clases</h3>
+              <p class="plan-price">$28.000</p>
+              <a href="#" class="plan-btn">Comenzar</a>
             </div>
-
-            <a
-              href="https://api.whatsapp.com/send?phone=5401144346779&text=Hola,%20estoy%20interesado/a%20en%20el%20plan%20BÁSICO"
-              class="price__cta"
-              target="_blank"
-              >Comenzá ahora</a
-            >
-          </div>
-
-          <div
-            class="price__element price__element--recommended card-recommended"
-          >
-            <p class="price__name">Plan 8 clases</p>
-            <h3 class="price__price">$30.000 / mes</h3>
-
-            <div class="price__items">
-              <p class="price__features">
-                <i class="fas fa-check"></i> 3 x semana
-              </p>
-              <p class="price__features">
-                <i class="fas fa-check"></i> Clases Grupales
-              </p>
-              <p class="price__features">
-                <i class="fas fa-check"></i> Atención Personalizada
-              </p>
+            <div class="pricing-plan">
+              <h3 class="plan-name">8 Clases</h3>
+              <p class="plan-price">$38.000</p>
+              <a href="#" class="plan-btn">Comenzar</a>
             </div>
-
-            <a
-              href="https://api.whatsapp.com/send?phone=5401144346779&text=Hola,%20estoy%20interesado/a%20en%20el%20plan%20Rde20%820%clases"
-              class="price__cta"
-              target="_blank"
-              >Comenzá ahora</a
-            >
-          </div>
-
-          <div class="price__element">
-            <p class="price__name">Plan 12 clases</p>
-            <h3 class="price__price">$45.000 / mes</h3>
-
-            <div class="price__items">
-              <p class="price__features">
-                <i class="fas fa-check"></i> Todos los días hábiles
-              </p>
-              <p class="price__features">
-                <i class="fas fa-check"></i>Clases Grupales
-              </p>
-              <p class="price__features">
-                <i class="fas fa-check"></i> Beneficios disponibles
-              </p>
+            <div class="pricing-plan">
+              <h3 class="plan-name">12 Clases</h3>
+              <p class="plan-price">$49.000</p>
+              <a href="#" class="plan-btn">Comenzar</a>
             </div>
-
-            <a
-              href="https://api.whatsapp.com/send?phone=5401144346779&text=Hola,%20estoy%20interesado/a%20en%20el%20plan%20PREMIUM"
-              class="price__cta"
-              target="_blank"
-              >Comenzá ahora</a
-            >
+            <div class="pricing-plan">
+              <h3 class="plan-name">Clase de Prueba</h3>
+              <p class="plan-price">$7.000</p>
+              <a href="#" class="plan-btn">Comenzar</a>
+            </div>
           </div>
         </div>
       </section>
@@ -389,22 +338,20 @@
 
       <div class="schedule-section">
         <section id="horario" class="schedule">
-          <h2><span>Horarios</span> de Clases</h2>
+          <h2>Horarios de Clases</h2>
           <div class="table-wrapper">
             <table class="schedule-table" aria-describedby="Horario">
               <thead>
                 <tr>
                   <th data-initial="L">Lunes</th>
-                  <th data-initial="M">Martes</th>
-                  <th data-initial="M">Miércoles</th>
+                  <th data-initial="Ma">Martes</th>
+                  <th data-initial="Mie">Miércoles</th>
                   <th data-initial="J">Jueves</th>
                   <th data-initial="V">Viernes</th>
                   <th data-initial="S">Sábado</th>
                 </tr>
               </thead>
-              <tbody id="schedule-body">
-                <!-- Aquí se agregarán las filas de horarios dinámicamente -->
-              </tbody>
+              <tbody id="schedule-body"></tbody>
             </table>
           </div>
         </section>
@@ -575,7 +522,7 @@
             <iframe
               title="map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4060.7501725086654!2d-58.6535235698293!3d-34.395024286034314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca1abbbc55da7%3A0x77ea769ca86df54b!2sPilates%20de%20la%20Bahia%2C%20Nordelta!5e0!3m2!1ses-419!2sar!4v1709740148177!5m2!1ses-419!2sar"
-              width="1000"
+              width="100%"
               height="450"
               style="border: 0"
               allowfullscreen=""
@@ -589,9 +536,9 @@
             <ul class="contact__list">
               <li class="contact__item">
                 <i class="fas fa-map-marker-alt"></i>
-                <span>
-                  Boulevard del Mirador 220 3er Piso - Depto. 3 Studios de la
-                  Bahía 1 Bahía Grande - Nordelta Río</span
+                <span
+                  >3° piso Boulevard del Mirador 220, Bahía Grande, Nordelta,
+                  Argentina</span
                 >
               </li>
               <li class="contact__item">
@@ -599,30 +546,27 @@
                   href="https://api.whatsapp.com/send?phone=5401144346779"
                   target="_blank"
                 >
-                  <!-- link para WHATSAPP -->
                   <i class="fab fa-whatsapp"></i>
                   <span>+54 11 4434-6779</span>
                 </a>
               </li>
-
               <li class="contact__item">
                 <a
                   href="https://www.facebook.com/pilatesdelabahia/"
                   target="_blank"
                 >
                   <i class="fa-brands fa-facebook"></i>
-                  <span>Pilates de la Bahia, Nordelta </span></a
-                >
+                  <span>Pilates de la Bahia, Nordelta</span>
+                </a>
               </li>
-
               <li class="contact__item">
                 <a
                   href="https://www.instagram.com/pilatesdelabahia/"
                   target="_blank"
                 >
                   <i class="fa-brands fa-instagram"></i>
-                  <span>@pilatesdelabahia</span></a
-                >
+                  <span>@pilatesdelabahia</span>
+                </a>
               </li>
             </ul>
           </div>
@@ -690,7 +634,7 @@
           id="btnScrollToTop"
           class="floating-button"
         >
-          <i class="fa-solid fa-arrow-up"></i>
+          <i class="fa-solid fa-chevron-up"></i>
         </button>
         <div class="floating-button tomoTurno">
           <a
