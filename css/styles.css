@@ -21,7 +21,7 @@ html {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  overflow: hidden;
+  /* overflow: hidden; */
   padding: var(--padding-container);
 }
 
@@ -94,6 +94,7 @@ html {
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s, transform 0.3s;
   text-transform: uppercase;
+  border-radius: 25px;
 }
 
 .cta-primary {
@@ -373,6 +374,10 @@ html {
 
 /* -------------------- SECCION ACTIVIDADES -------------------- */
 
+#actividades {
+  margin-bottom: 20px;
+}
+
 .activities {
   padding: 50px 0;
 }
@@ -404,7 +409,9 @@ html {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   display: flex;
-  flex-direction: column; /* Cambio para mejor alineación del texto */
+  flex-direction: column;
+  flex-grow: 1;
+  min-height: 0;
 }
 
 .card__image {
@@ -417,6 +424,10 @@ html {
 
 .card__content {
   padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card__title {
@@ -435,7 +446,7 @@ html {
 }
 
 .benefits {
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   text-align: left;
 }
 
@@ -468,7 +479,7 @@ html {
   font-weight: 400;
   text-align: center;
   text-decoration: none;
-  border-radius: 0px;
+  border-radius: 25px;
   transition: background-color 0.3s, color 0.3s, transform 0.3s;
   text-transform: uppercase;
   background-color: var(--verde-claro);
@@ -482,12 +493,12 @@ html {
 /* Estilos para dispositivos medianos (como el iPad) */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .activities__grid {
-    justify-content: center; /* Centra las actividades en dispositivos medianos */
+    justify-content: center;
   }
 
   .activity {
-    max-width: 300px; /* Limita el ancho de las actividades en dispositivos medianos */
-    margin-bottom: 30px; /* Agrega margen entre las actividades */
+    max-width: 300px;
+    margin-bottom: 30px;
   }
 }
 
@@ -497,6 +508,7 @@ html {
   margin: 20px auto;
   max-width: 800px;
   overflow-x: auto;
+  margin-top: 30px;
 }
 
 .schedule {
@@ -508,7 +520,7 @@ html {
   font-size: 2rem;
   margin-bottom: 18px;
   text-align: center;
-  color: var(--color-title);
+  color: var(--verde-claro);
   text-transform: uppercase;
 }
 
@@ -576,7 +588,7 @@ html {
 
 .pricing {
   padding: 50px 0;
-  background-color: #f9f9f9;
+  background-color: #f4f4f4;
 }
 
 .container {
@@ -648,7 +660,7 @@ html {
   background-color: var(--verde-claro);
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 25px;
   transition: background-color 0.3s;
 }
 
@@ -863,7 +875,7 @@ html {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 30px; /* Add some space below the map */
+  margin-bottom: 30px;
 }
 
 .contact__map iframe {
@@ -874,13 +886,13 @@ html {
 .contact__info {
   margin-top: 30px;
   width: 100%;
-  max-width: 600px; /* Set a max width for the contact info */
+  max-width: 600px;
 }
 
 .contact__heading {
-  font-size: 24px;
+  font-size: 34px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   color: var(--verde-claro);
   text-transform: uppercase;
 }
@@ -894,7 +906,7 @@ html {
 .contact__item {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 .contact__item a {
@@ -905,7 +917,7 @@ html {
 .contact__item i {
   margin-right: 10px;
   color: #269692;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .contact__item span {
@@ -921,8 +933,8 @@ html {
 
 @media screen and (max-width: 768px) {
   .contact__map iframe {
-    width: 100%; /* Ensure the map iframe takes the full width on smaller screens */
-    height: 300px; /* Adjust the height for better visibility on smaller screens */
+    width: 100%;
+    height: 300px;
   }
 
   .contact__list {
@@ -966,7 +978,7 @@ html {
 }
 
 .footer__section p {
-  margin-bottom: 1rem;
+  margin-bottom: 30px;
   color: inherit;
 }
 
@@ -988,13 +1000,14 @@ html {
 }
 
 .footer__list li {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .footer__list a {
   text-decoration: none;
   color: #fff;
   transition: color 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 .footer__list a:hover {
@@ -1008,12 +1021,12 @@ html {
 
 .footer__social-list i {
   font-size: 2rem;
-  color: #3afff8;
+  color: #fff;
   text-decoration: none;
 }
 
 .footer__social-list i:hover {
-  color: var(--azul-oscuro);
+  color: var(--verde-claro);
   transition: 0.2s ease-out;
 }
 
@@ -1030,7 +1043,7 @@ html {
   font-size: 20px;
   text-align: center;
   color: #fff;
-  margin-top: 60px; /* Ajusta el valor según sea necesario */
+  margin-top: 40px;
 }
 
 .footer__copyright p {
