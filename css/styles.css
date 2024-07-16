@@ -365,11 +365,11 @@ html {
 /* -------------------- SECCION ACTIVIDADES -------------------- */
 
 #actividades {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 .activities {
-  padding: 50px 0;
+  padding: 0;
 }
 
 .subtitle {
@@ -630,93 +630,93 @@ html {
 /* ------------------------- LISTA DE PRECIOS --------------------------- */
 
 .pricing {
-  padding: 50px 0;
-  background-color: #f4f4f4;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.section-title-plan {
-  font-size: 2.5rem;
-  color: var(--verde-claro);
+  padding: 1px 20px;
+  background-color: #f9f9f9;
   text-align: center;
-  margin-bottom: 30px;
+}
+
+.pricing-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--verde-claro);
   text-transform: uppercase;
 }
 
 .section-subtitle {
   font-size: 1.2rem;
-  color: #666;
-  text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  color: var(--color-title);
   font-weight: 500;
-  text-transform: uppercase;
 }
 
 .pricing-plans {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
 }
 
 .pricing-plan {
-  width: 300px;
-  background-color: #fff;
+  background: #fff;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 20px;
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px 20px;
+  flex: 1 1 calc(25% - 40px);
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .pricing-plan:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 .plan-name {
-  font-size: 1.5rem;
+  font-size: 24px;
+  margin-bottom: 20px;
   color: #333;
-  margin-bottom: 15px;
-  text-transform: uppercase;
 }
 
 .plan-price {
-  font-size: 2rem;
-  font-weight: 500;
-  color: var(--verde-claro);
+  font-size: 28px;
+  font-weight: bold;
+  color: #27ae60;
   margin-bottom: 20px;
 }
 
 .plan-btn {
   display: inline-block;
-  padding: 10px 20px;
-  font-size: 1rem;
-  text-decoration: none;
-  text-transform: uppercase;
+  padding: 12px 24px;
   background-color: var(--verde-claro);
   color: #fff;
-  border: none;
+  text-decoration: none;
+  font-size: 16px;
   border-radius: 25px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .plan-btn:hover {
   background-color: var(--verde-oscuro);
+  transform: scale(1.05);
+}
+
+/* Estilos responsivos */
+@media (max-width: 1024px) {
+  .pricing-plan {
+    flex: 1 1 calc(50% - 40px);
+  }
 }
 
 @media (max-width: 768px) {
-  .section-title {
-    font-size: 2rem;
+  .pricing-plan {
+    flex: 1 1 100%;
+    max-width: 90%;
+    margin: 0 auto 0px;
   }
 
-  .pricing-plan {
+  .plan-btn {
     width: 100%;
-    margin: 10px 0;
+    margin-top: 1px;
   }
 }
 
