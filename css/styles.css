@@ -52,7 +52,7 @@ html {
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),
-    url("../images/pilates6.jpg");
+    url("../images/fondo.jpeg");
   background-size: cover;
   background-position: center;
   z-index: -1;
@@ -1448,10 +1448,18 @@ html {
   .no-deco {
     text-decoration: none;
   }
+
+  .footer__section i p {
+    text-decoration: none;
+  }
 }
 
 @media (max-width: 468px) {
   .no-deco {
+    text-decoration: none;
+  }
+
+  .footer__section i p {
     text-decoration: none;
   }
 }
