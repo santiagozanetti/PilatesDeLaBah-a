@@ -1452,6 +1452,15 @@ html {
   .footer__section i p {
     text-decoration: none;
   }
+  .phone-number {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.phone-number {
+  color: inherit;
+  text-decoration: none;
 }
 
 @media (max-width: 468px) {
@@ -1460,6 +1469,11 @@ html {
   }
 
   .footer__section i p {
+    text-decoration: none;
+  }
+
+  .phone-number {
+    color: inherit;
     text-decoration: none;
   }
 }
